@@ -70,18 +70,18 @@ Screen {
                 hhInput.buttonText   = right('0' + hh ,2)
                 minInput.buttonText  = right('0' + min,2)
                 secInput.buttonText  = right('0' + sec,2)
-                btn1.buttonText = "Middernacht"
-                btn2.buttonText = "Kerstmis"
-                btn3.buttonText = "Nieuw Jaar"
-                btn4.buttonText = "Valentijn"
-                btn5.buttonText = "Carnaval"
-                btn6.buttonText = "Pasen"
-                btn7.buttonText = "Sinterklaas"
-                btn8.buttonText = "Moederdag5"      // 5  :: mei
-                btn9.buttonText = "Moederdag8"      // 8  :: augustus
-                btn10.buttonText = "Vaderdag3"      // 3  :: maart
-                btn11.buttonText = "Vaderdag62"     // 62 :: juni 2e zondag
-                btn12.buttonText = "Vaderdag63"     // 63 :: juni 3e zondag
+                btn1.buttonText  = "Middernacht"
+                btn2.buttonText  = "Kerstmis"
+                btn3.buttonText  = "Nieuw Jaar"
+                btn4.buttonText  = "Valentijn"
+                btn5.buttonText  = "Carnaval"
+                btn6.buttonText  = "Pasen"
+                btn7.buttonText  = "Sinterklaas"
+                btn8.buttonText  = "Moederd.mei"      // 5  :: mei
+                btn9.buttonText  = "Moederd.aug"      // 8  :: augustus
+                btn10.buttonText = "Vaderd.mrt"      // 3  :: maart
+                btn11.buttonText = "Vaderd.jun2"     // 62 :: juni 2e zondag
+                btn12.buttonText = "Vaderd.jun3"     // 63 :: juni 3e zondag
                 btn13.buttonText = "Zomertijd"
                 btn14.buttonText = "Wintertijd"
                 btn15.buttonText = "Halloween"
@@ -373,7 +373,7 @@ Screen {
             break;
 
 // Moederdagen en Vaderdagen
-        case "Moederdag5" :
+        case "Moederd.mei" :
             var dateString = nowyyyy + '-04-30 00:00:00'
             var newdate = new Date(dateString)
             var sundays = 0
@@ -392,7 +392,7 @@ Screen {
                 }
             }
             break;
-        case "Moederdag8" :
+        case "Moederd.aug" :
             if (( nowmm > 8 ) || ( ( nowmm == 8 ) && (nowdd > 15 ) ) ) {
                 var dateString = (parseInt(nowyyyy) + 1) + '-08-15 00:00:00'
             } else {
@@ -400,9 +400,9 @@ Screen {
             }
             var newdate = new Date(dateString)
             break;
-        case "Vaderdag62" :
-        case "Vaderdag63" :
-            if (what == "Vaderdag62" ) {var count = 2 } else { var count = 3} 
+        case "Vaderd.jun2" :
+        case "Vaderd.jun3" :
+            if (what == "Vaderd.jun2" ) {var count = 2 } else { var count = 3} 
             var dateString = nowyyyy + '-05-31 00:00:00'
             var newdate = new Date(dateString)
             var sundays = 0
@@ -421,7 +421,7 @@ Screen {
                 }
             }
             break;
-        case "Vaderdag3" :
+        case "Vaderd.mrt" :
             if (( nowmm > 3 ) || ( ( nowmm == 3 ) && (nowdd > 19 ) ) ) {
                 var dateString = (parseInt(nowyyyy) + 1) + '-03-19 00:00:00'
             } else {
