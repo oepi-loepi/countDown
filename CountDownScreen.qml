@@ -401,8 +401,8 @@ Screen {
             var newdate = new Date(dateString)
             break;
         case "Vaderd.jun2" :
-        case "Vaderd,jun3" :
-            if (what == "Vaderdag62" ) {var count = 2 } else { var count = 3} 
+        case "Vaderd.jun3" :
+            if (what == "Vaderd.jun2" ) {var count = 2 } else { var count = 3} 
             var dateString = nowyyyy + '-05-31 00:00:00'
             var newdate = new Date(dateString)
             var sundays = 0
